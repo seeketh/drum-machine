@@ -28,8 +28,6 @@ export function DrumBank(props) {
         props.powered && setActiveDrumType("");
     }, [props.powered]);
 
-    console.log(props);
-
     return (
         <div className="drum-bank">
             <DrumBankDisplay activeDrumType={(props.powered) ? activeDrumType : ""} />

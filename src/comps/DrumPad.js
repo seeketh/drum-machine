@@ -58,7 +58,6 @@ export class DrumPad extends Component {
     }
 
     render() {
-        console.log("in the pad: ", this.props)
         return (
             <div>
                 <button
