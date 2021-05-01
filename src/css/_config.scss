@@ -1,0 +1,73 @@
+/* Variables and mixins */
+
+@mixin flex-box($orientation, $wrap, $x, $y) {
+    display: flex;
+    flex-flow: $orientation $wrap;
+    @if $orientation == column {
+        justify-content: $y;
+        align-items: $x;
+    }
+    @else if $orientation == row {
+        justify-content: $x;
+        align-items: $y;
+    }
+}
+
+@mixin selectorShell {
+    @include flex-box(column, nowrap, flex-start, flex-start);
+    box-sizing: border-box;
+    padding: 1px;
+    border: none;
+}
+
+@mixin volumeLevelIndicator {
+    box-sizing: border-box;
+    border: none;
+    height: 100%;
+    width: 100%;
+
+}
+
+$full: 100%;
+$screen-height: 100vh;
+$screen-width: 100vw;
+
+$drum-knob-height: 70px;
+$drum-knob-width: 70px;
+
+$pad-column-width: 1fr;
+$drum-bank-grid-gap: 10px;
+
+$control-pad-width: 230px;
+$control-pad-padding: 10px;
+
+$active-drum-type-width: 150px;
+
+$initial-knob-top-margin: 10px;
+$final-knob-top-margin: 13px;
+
+/* colors */
+
+$control-green: #39e600;
+$control-yellow: #ffff80;
+$control-red: red;
+$control-gray: gray;
+$control-light-gray: #999999;
+$control-black: black;
+$control-inactive: #d9d9d9;
+
+@mixin knob {
+    background-color: $control-gray;
+    margin-top: $initial-knob-top-margin;
+    box-shadow: 3px 3px 5px $control-black;
+    outline: none;
+    border: 2px solid $control-gray;
+    border-radius: 2px;
+    /*color: $control-black;*/
+}
+
+@mixin knob-active {
+    box-shadow: 1px 1px 4px $control-black;
+    /*margin-top: $final-knob-top-margin;*/
+    transform: translateY(3px);
+}

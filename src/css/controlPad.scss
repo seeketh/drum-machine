@@ -1,0 +1,73 @@
+/* Styling the Control Pad container */
+@import './config';
+
+
+.control-pad {
+    @include flex-box(row, nowrap, flex-start, flex-end);
+    width: $full;
+    height: 200px;
+    background-color: $control-gray;
+    padding: $control-pad-padding;
+    margin-top: 50px;
+    margin-left: 20px;
+
+}
+
+.volume-display {
+    padding: 0px;
+    height: 200px;
+}
+
+.control-knobs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-evenly;
+    gap: 0 10px;
+    padding: 10px 10px 10px 30px;
+    height: 185px;
+}
+
+.expansion-slot {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    @include flex-box(row, nowrap, center, center);
+    background-color: $control-light-gray;
+    text-align: right;
+    padding: 3px;
+    height: 100px;
+    font-size: 2em;
+    border-radius: 10px;
+}
+
+.knob {
+    @include knob;
+    height: 30px;
+    width: 65px;
+    font-size: .85em;
+}
+
+.knob:active {
+    @include knob-active;
+    color: #595959;
+}
+
+.vol-knob {
+    @include knob;
+    height: 30px;
+    width: 65px;
+    font-size: 1.3em;
+}
+
+.vol-knob:active {
+    @include knob-active;
+    color: #595959;
+}
+
+.active-drum-set {
+    color: cyan;
+    background-color: indianred;
+}
+
+.inactive-drum-set {
+    color: black;
+}

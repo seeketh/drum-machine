@@ -1,0 +1,43 @@
+@import './config';
+
+.drum-machine  {
+    background-color: white;
+    height: $screen-height;
+    width: $screen-width;
+    @include flex-box(column, nowrap, center, center);
+}
+
+.drum-machine-canvas {
+    width: 485px;
+    background-color: $control-light-gray;
+    border-top-right-radius: 6px;
+    border-top-left-radius: 6px;
+    box-shadow: 3px 3px 5px black;
+}
+
+.power-canvas {
+    background-color: $control-light-gray;
+    border-top-right-radius: 6px;
+    border-top-left-radius: 6px;
+    height: 30px;
+    width: $full;
+    font-size: 1.15em;
+    @include flex-box(row, nowrap, center, center);
+}
+
+.power-switch-on {
+    @extend .power-canvas;
+    color: greenyellow;
+}
+
+.power-switch-off {
+    @extend .power-canvas;
+    color: $control-inactive;
+}
+
+.drum-container {
+    background-color: $control-gray;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    @include flex-box(row, nowrap, center, center);
+}

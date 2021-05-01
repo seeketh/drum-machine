@@ -1,0 +1,30 @@
+/* Styling Volume Level Selector */
+@import '../css/config';
+
+.volume-level-selector {
+    @include selectorShell;
+    width: 10px;
+    height: 16px;
+    margin-top: 3px;
+    background-color: $control-inactive;
+}
+
+.greenVolumeLevelIndicator {
+    @include volumeLevelIndicator;
+    background-color: $control-green;
+}
+
+.yellowVolumeLevelIndicator {
+    @include volumeLevelIndicator;
+    background-color: $control-yellow;
+}
+
+.redVolumeLevelIndicator {
+    @include volumeLevelIndicator;
+    background-color: $control-red;
+}
+
+.grayVolumeLevelIndicator {
+    @include volumeLevelIndicator;
+    background-color: $control-inactive;
+}

@@ -1,0 +1,49 @@
+/* Styling Drum knob */
+@import './config';
+
+.drum-pad {
+    background-color: $control-gray;
+    margin-top: $initial-knob-top-margin;
+    box-shadow: 3px 3px 5px $control-black;
+    height: 65px;
+    width: 65px;
+    outline: none;
+    border: 2px solid $control-gray;
+    border-radius: 2px;
+    color: $control-black;
+    font-size: 1.05em;
+}
+
+.active-drum-pad {
+    margin-top: $initial-knob-top-margin;
+    background-color: orange;
+    height: 65px;
+    width: 65px;
+    outline: none;
+    border: 2px solid $control-gray;
+    border-radius: 2px;
+    color: $control-black;
+    font-size: 1.05em;
+    box-shadow: 1px 1px 4px $control-black;
+    transform: translateY(3px);   
+}
+
+.drum-pad:active {
+    background-color: orange;
+    box-shadow: 1px 1px 4px $control-black;
+    /*margin-top: $final-knob-top-margin;*/
+    transform: translateY(3px);  
+}
+
+.inactive-drum-pad {
+    background-color: $control-gray;
+    margin-top: $initial-knob-top-margin;
+    box-shadow: 3px 3px 5px $control-black;
+    height: 65px;
+    width: 65px;
+    outline: none;
+    border: 2px solid $control-gray;
+    border-radius: 2px;
+    color: $control-black;
+    font-size: 1.05em;
+}

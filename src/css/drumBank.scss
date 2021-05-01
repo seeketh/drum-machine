@@ -1,0 +1,32 @@
+/* Styling Drump Bank */
+@import './config';
+
+.drum-bank {
+    display: grid;
+    width: $full;
+    grid-template-columns: $pad-column-width $pad-column-width $pad-column-width;
+    gap: 0 $drum-bank-grid-gap;
+    background-color: $control-gray;
+    padding: 8px 10px 12px 10px;
+    box-sizing: border-box;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+}
+
+.drum-bank-display {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    width: 465px;
+    background-color: rgba($color: #ccebff, $alpha: 0.5);
+    height: 40px;
+    @include flex-box(row, nowrap, center, center);
+    border-radius: 2px;
+    text-transform: uppercase;
+    color: #404040;
+    border: 1px solid #99ccff;
+}
+
+.active-drum-type {
+    width: $active-drum-type-width;
+    text-align: center;
+}
